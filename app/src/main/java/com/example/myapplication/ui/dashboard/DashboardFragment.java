@@ -26,6 +26,13 @@ public class DashboardFragment extends Fragment {
 
         final TextView textView = binding.textDashboard;
         dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
+        final TextView waterValueView = binding.txtWaterValue;
+        dashboardViewModel.getWaterValue().observe(getViewLifecycleOwner(), waterValueView::setText);
+
+        final TextView foodValueView = binding.txtFoodValue;
+        dashboardViewModel.getFoodValue().observe(getViewLifecycleOwner(), foodValueView::setText);
+
         return root;
     }
 
